@@ -12,7 +12,7 @@ const Container = ({children}) => {
 export default Container;
 
 const CommonContainer = styled.div`
-  max-width: 80%;
+  width: 1320px;
   margin: 0 auto;
-  border: 1px solid green;
+  border: 1px dotted green;
 `;

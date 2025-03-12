@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Container from './../common/Container';
 import NavItem from './NavItem';
+import logo from '../../assets/images/Logo.svg'
 
 const Navbar = () => {
     return (
@@ -9,11 +10,16 @@ const Navbar = () => {
             <Background>
                 <Container>
                     <SideBySide>
-                        <Logo>Logo</Logo>
+                        <Logo>
+                          <img src={logo} alt="" />
+                        </Logo>
                         <MenuItem>
-                        <NavItem/>
+                          <NavItem/>
                         </MenuItem>
-                        <GroupButtons>Button</GroupButtons>
+                        <GroupButtons>
+                           <Button>Login</Button>
+                           <Button $bg>Sign up</Button>
+                          </GroupButtons>
                     </SideBySide>
                 </Container>
             </Background>
@@ -24,8 +30,9 @@ const Navbar = () => {
 export default Navbar;
 
 const Background = styled.div`
-  background-color: red;
-  height: 50px;
+  padding: 22px 0;
+  border: 1px dotted red;
+  background: #F5F7FA;
 `;
 const SideBySide = styled.div`
   display: flex;
@@ -33,14 +40,23 @@ const SideBySide = styled.div`
     align-items: center;
 `;
 const Logo = styled.div`
-  width: 10%;
-  background-color: green;
+  
 `;
 const MenuItem = styled.div`
-  width: 70px;
-  background-color: yellow;
+  
   `;
 const GroupButtons = styled.div`
-width: 20px;
-background-color: purple;
+  display: flex;
+  column-gap: 20px;
+`;
+const Button = styled.button`
+  background: ${props => props.$bg ? "#4CAF4F" : "#fff"};
+  color: ${props => props.$bg ? "#fff" : "#4CAF4F"};
+  padding: 10px 20px;
+  border: 1px dotted #4CAF4F;
+  border-radius: 6px;
+  -webkit-border-radius:S
+  &:hover{
+    background: #4CAF4F
+}
 `;
