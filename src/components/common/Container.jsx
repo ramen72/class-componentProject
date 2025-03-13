@@ -14,5 +14,5 @@ export default Container;
 const CommonContainer = styled.div`
   width: 1320px;
   margin: 0 auto;
-  border: 1px dotted green;
+//   border: 1px dotted green;
 `;

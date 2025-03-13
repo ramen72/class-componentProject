@@ -31,7 +31,7 @@ export default Navbar;
 
 const Background = styled.div`
   padding: 22px 0;
-  border: 1px dotted red;
+  // border: 1px dotted red;
   background: #F5F7FA;
 `;
 const SideBySide = styled.div`
