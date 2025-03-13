@@ -10,9 +10,9 @@ const Navbar = () => {
             <Background>
                 <Container>
                     <SideBySide>
-                        <Logo>
-                          <img src={logo} alt="" />
-                        </Logo>
+                        <LogoWrapper>
+                          <Logo src={logo} alt="Logo" />
+                        </LogoWrapper>
                         <MenuItem>
                           <NavItem/>
                         </MenuItem>
@@ -39,7 +39,7 @@ const SideBySide = styled.div`
     justify-content: space-between;
     align-items: center;
 `;
-const Logo = styled.div`
+const LogoWrapper = styled.div`
   
 `;
 const MenuItem = styled.div`
@@ -58,5 +58,8 @@ const Button = styled.button`
   -webkit-border-radius:S
   &:hover{
     background: #4CAF4F
-}
+}`;
+
+const Logo = styled.img`
+  width: 100%;
 `;
